@@ -22,7 +22,7 @@ sudo yum install -y openshift-ansible-${RPM_VERSION} \
 openshift-ansible-*-${RPM_VERSION}
 sudo yum downgrade -y python2-passlib-1.6.5
 
-sudo ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml -i byo.inventory
+sudo ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml -i hosts.origin.inventory
 
 sudo oadm policy add-role-to-user admin admin
 sudo oadm policy add-cluster-role-to-user cluster-admin admin
